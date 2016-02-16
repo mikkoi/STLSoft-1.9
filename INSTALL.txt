@@ -7,6 +7,7 @@ STLSoft - Install
 ============================================================================
 
  STLSoft is a 100% header-only library, and so requires no building.
+ (Please see below if your project uses CMake.)
 
  It is recommended that you define an STLSOFT environment variable.
  
@@ -45,5 +46,23 @@ STLSoft - Install
 
  NOTE: If you're using STLSoft 1.10 in alpha (delta) form, please consult
     FAQ #6 in the accompanying FAQ.txt file.
+
+
+ CMake Users
+ If your project uses CMake (https://cmake.org/) as its build tool,
+ you can install STLSoft as you would any other CMake project:
+ 1. cd stlsoft-1.9.125
+ 2. mkdir build && cd build
+ 3. cmake .. -DCMAKE_INSTALL_PREFIX=<dir_to_copy_includes>
+ 3. make install
+ Installing STLSoft is not necessary for using it.
+
+ When using STLSoft in your own project, add these rows to your CMakeLists.txt:
+ find_package(STLSoft 1.9.125 REQUIRED)
+ include_directories (${STLSoft_INCLUDE_DIRS})
+
+ If you ran 'cmake' as stated above, then the location of STLSoft is
+ automatically known to CMake.
+ (Cached in User's home directory; ~/.cmake/packages/STLSoft/ in Unix).
 
 =============================== End of file ================================
