@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 project(STLSoft C CXX)
 
-set(STLSoft_VERSION 1.9.125)
+set(STLSoft_VERSION 1.9.131)
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
